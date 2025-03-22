@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Loading bar</title>
+</head>
+<style>
+       *{margin:0; padding:0;}
+
+        .load{background-color:red;
+              height:.2vw; width:100vw;}
+         
+             @keyframes load {
+                               0%{width:0vw;}
+                               25%{width:25vw;}
+                               50%{width:50vw;}
+                               100%{width:100vw;}    }
+         .load{ animation: load 2s linear 0s infinite ;
+                  animation-timing-function: steps(1, end);}
+
+
+
+     .list{background-color:black;
+            color:white;
+            height:10vh; width:100vw;
+           }
+        li{display:inline-block;
+          padding:4vh 30vh 0vh 0vh; }
+
+          #le{height:60vh; width:40vw;
+                 border:1vh solid black;
+                display:inline-flex ;
+                  border-radius:3vh;
+                     background-color:aqua;
+                      position:relative;
+                     top:10vh; left:5vw;
+                     justify-content:space-between;
+                      flex-wrap:wrap;}
+   
+         #ri{height:60vh; width:40vw;
+                 border:1vh solid black;
+                display:inline-flex ;
+                border-radius:3vh;
+                    background-color:green;
+                    margin:auto; position:relative;
+                    top:10vh; left:15vw;
+                    
+                    }
+             img {height:20vh;
+                   }
+                
+              
+             left{justify-content:space-around;
+                 flex-wrap: wrap;}
+   
+    @keyframes rota {
+                               0%{rotate:30deg;}
+                               25%{rotate:60deg;}
+                               50%{rotate:90deg;}
+                               100%{rotate:180deg;}    }
+         .left{ animation: img 10s linear 0s infinite normal;}
+   
+   
+   
+   
+   
+   
+
+
+</style>
+<body>
+<div class="load">
+ 
+</div>
+<head>
+        
+         <ul class="list">
+       <center>
+             <li>Home</li>  
+             <li>About</li>  
+             <li>Contact</li>  
+         </ul>    
+</head>
+
+<div class="left" id="le"><center><img class="rot" src="dog.jpg" alt="curling dog"></center>
+</div>
+
+
+<div class="left" id="ri"><center><img class="rot" src="dog.jpg" alt="curling dog"></center>
+</div><br>
+
+
+
+<div class="dog">
+<img src="dog.jpg" alt="curling dog">
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

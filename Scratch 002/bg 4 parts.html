@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google G Icon</title>
+  <style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f1f1f1;
+}
+
+.google-icon {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: #4285F4; /* Blue */
+  position: relative;
+}
+
+.g-shape {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: conic-gradient(
+    #4285F4 0deg 90deg,   /* Blue */
+    #34A853 90deg 180deg, /* Green */
+    #FBBC05 180deg 270deg, /* Yellow */
+    #EA4335 270deg 360deg /* Red */
+  );
+  border-radius: 50%;
+}
+
+</style>
+</head>
+<body>
+  <div class="google-icon">
+    <div class="g-shape"></div>
+  </div>
+</body>
+</html>

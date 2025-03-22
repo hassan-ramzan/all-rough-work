@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Practice</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+*{margin:0; padding:0;
+  color:white;}
+header{height:100px;}
+.navbar{height:100px;
+        width:100vw;
+        background-color:#0f1111;
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        flex-wrap:wrap;}
+.internals{display:flex;
+           width:50vw;
+             justify-content:space-around;
+             align-items:center;}
+#logo{color:#f08804;
+      font-size:20px;}
+button{background-color:#f08804;border:none;}
+li input{width:20vw;}
+.navbar li{list-style:none;
+           }
+
+button{background-color:#f08804;}
+.fa-solid{display:none;}
+@media screen and (max-width:865px) and (min-width:400px) {
+   .navbar{flex-direction:column;
+           justify-content:center;}
+   #logo{padding:10px 0px;}
+   li input{width:50vw;}
+   .navbar li{margin:0px 0px;}
+   
+   .internals{display:flex;
+             justify-content:space-around;
+             align-items:center;
+              width:70vw;
+              padding:3px 0px;}
+}
+@media screen and (0<width<400px) {
+   .navbar{justify-content:space-around;}
+   .fa-solid{display:flex;
+             color:#f08804;
+             font-size:20px;}
+   .internals{display:none;}
+   li input,button{display:none;}
+}
+
+
+
+
+
+
+</style>
+</head>
+<body>
+
+  
+<header>
+<ul class="navbar">
+    <div id="logo">amazon.in</div>
+   <div class="internals">
+    <li>account</li>
+    <li>my cart</li>
+    <li>conact us</li>
+   </div>
+    <li><input placeholder="search amazon.in">
+           <button>Search</button></li>
+   <i class="fa-solid fa-bars"></i>
+</ul>
+</header>
+"??";
+
+</body>

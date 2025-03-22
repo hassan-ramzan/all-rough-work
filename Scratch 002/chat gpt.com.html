@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Website Example</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+    <style>
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background: #f0f0f0;
+}
+
+/* Header Styles */
+.sticky-header {
+    position: sticky;
+    top: 0;
+    background: #333;
+    color: #fff;
+    z-index: 1000;
+    padding: 10px 0;
+}
+
+.sticky-header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.sticky-header .logo h1 {
+    font-size: 1.8em;
+}
+
+.sticky-header .nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.sticky-header .nav-links li {
+    margin-left: 20px;
+}
+
+.sticky-header .nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+.sticky-header .hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    border: none;
+    background: transparent;
+}
+
+.sticky-header .hamburger span {
+    display: block;
+    width: 30px;
+    height: 4px;
+    background: #fff;
+}
+
+.sticky-header .hamburger:hover {
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    background: url('https://via.placeholder.com/1500x800') no-repeat center center/cover;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.hero-content {
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    padding: 15px 30px;
+    background: #ff5722;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+    background: #e64a19;
+}
+
+/* Services Section */
+.services {
+    padding: 50px 20px;
+    text-align: center;
+    background: #f4f4f4;
+}
+
+.services h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+}
+
+.service-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.service-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.service-card h3 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+.service-card p {
+    font-size: 1.1em;
+}
+
+.service-card:hover {
+    transform: scale(1.05);
+}
+
+/* Testimonials Section */
+.testimonials {
+    background: #333;
+    color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.testimonials h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+}
+
+.testimonial-slider {
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.testimonial {
+    background: #444;
+    padding: 30px;
+    border-radius: 8px;
+    width: 30%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    opacity: 0
+
+
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="sticky-header">
+        <nav>
+            <div class="logo">
+                <h1>MyWebsite</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Welcome to MyWebsite</h1>
+            <p>We provide top-notch services for your business.</p>
+            <a href="#services" class="cta-button">Get Started</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <h2>Our Services</h2>
+        <div class="service-container">
+            <div class="service-card" data-aos="fade-up">
+                <h3>Web Development</h3>
+                <p>Building responsive and modern websites tailored to your business needs.</p>
+            </div>
+            <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                <h3>SEO Optimization</h3>
+                <p>Boost your search engine rankings with our SEO expertise.</p>
+            </div>
+            <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+                <h3>Graphic Design</h3>
+                <p>Creative designs that make your brand stand out.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <h2>What Our Clients Say</h2>
+        <div class="testimonial-slider">
+            <div class="testimonial">
+                <p>"Great service, our website looks amazing!"</p>
+                <h4>John Doe</h4>
+                <p>CEO, Company A</p>
+            </div>
+            <div class="testimonial">
+                <p>"The SEO service helped us rank higher on Google."</p>
+                <h4>Jane Smith</h4>
+                <p>Marketing Director, Company B</p>
+            </div>
+            <div class="testimonial">
+                <p>"Creative and professional design team!"</p>
+                <h4>Alan Brown</h4>
+                <p>Founder, Company C</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section with Form -->
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <form id="contact-form">
+            <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+            </div>
+            <button type="submit" class="cta-button">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 MyWebsite. All rights reserved.</p>
+            <ul class="footer-links">
+                <li><a href="#privacy">Privacy Policy</a></li>
+                <li><a href="#terms">Terms of Service</a></li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
+</html>

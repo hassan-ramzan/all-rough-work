@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messenger</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            background-color: #f7f7f7;
+            overflow: hidden;
+        }
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            background: #4CAF50;
+            color: white;
+            position: relative;
+        }
+        .back-button {
+            font-size: 1.2rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .chat-container {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            overflow-y: auto;
+            padding: 20px;
+        }
+        .message {
+            max-width: 60%;
+            margin: 10px 0;
+            padding: 10px 15px;
+            border-radius: 15px;
+            position: relative;
+            word-wrap: break-word;
+            font-size: 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        .message.my-message {
+            margin-left: auto;
+            background-color: #4caf50;
+            color: white;
+            border-bottom-right-radius: 2px;
+        }
+        .message.sender-message {
+            margin-right: auto;
+            background-color: #ddd;
+            color: #333;
+            border-bottom-left-radius: 2px;
+        }
+        .translate-button {
+            align-self: flex-end;
+            font-size: 0.8rem;
+            color: #007BFF;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+        .translate-button:hover {
+            color: #0056b3;
+        }
+        .chat-input {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            background-color: white;
+            border-top: 1px solid #ccc;
+            position: relative;
+        }
+        .chat-icons {
+            display: flex;
+            gap: 10px;
+            margin-right: 10px;
+        }
+        .chat-icons i {
+            font-size: 1.5rem;
+            color: #666;
+            cursor: pointer;
+        }
+        .chat-icons i:hover {
+            color: #4caf50;
+        }
+        .chat-input input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            font-size: 1rem;
+            outline: none;
+        }
+        .chat-input button {
+            margin-left: 10px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 20px;
+            background-color: #4caf50;
+            color: white;
+            font-size: 1rem;
+            cursor: pointer;
+            outline: none;
+        }
+        .chat-input button:hover {
+            background-color: #45a049;
+        }
+    </style>
+    <!-- Font Awesome CDN for Icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="back-button" onclick="goBack()">
+            <i class="fas fa-arrow-left"></i>
+            Back
+        </div>
+        <h1>Messenger</h1>
+    </header>
+    <div class="chat-container" id="chatContainer">
+        <!-- Sender Message -->
+        <div class="message sender-message">
+            Hi there! How are you?
+            <span class="translate-button" onclick="translateMessage(this)">Translate</span>
+        </div>
+        <!-- My Message -->
+        <div class="message my-message">
+            I'm good, thank you! What about you?
+            <span class="translate-button" onclick="translateMessage(this)">Translate</span>
+        </div>
+        <!-- Sender Message -->
+        <div class="message sender-message">
+            I'm doing great! Have you checked out our new website design?
+            <span class="translate-button" onclick="translateMessage(this)">Translate</span>
+        </div>
+        <!-- My Message -->
+        <div class="message my-message">
+            Yes, it looks amazing! Great job!
+            <span class="translate-button" onclick="translateMessage(this)">Translate</span>
+        </div>
+    </div>
+    <div class="chat-input" id="chatInput">
+        <div class="chat-icons">
+            <i class="fas fa-paperclip" title="Attach"></i>
+            <i class="fas fa-smile" title="Emoji"></i>
+            <i class="fas fa-microphone" title="Voice"></i>
+        </div>
+        <input type="text" placeholder="Type your message..." id="messageInput">
+        <button>Send</button>
+    </div>
+
+    <script>
+        // Go back to the previous page
+        function goBack() {
+            window.history.back();
+        }
+
+        // Simulate translation of a message
+        function translateMessage(button) {
+            const messageElement = button.parentElement;
+            const originalText = messageElement.firstChild.textContent.trim();
+
+            // Simulated translations
+            const translations = {
+                "Hi there! How are you?": "¡Hola! ¿Cómo estás?",
+                "I'm good, thank you! What about you?": "Estoy bien, ¡gracias! ¿Y tú?",
+                "I'm doing great! Have you checked out our new website design?": "¡Estoy genial! ¿Has revisado el diseño de nuestro nuevo sitio web?",
+                "Yes, it looks amazing! Great job!": "¡Sí, se ve increíble! ¡Buen trabajo!"
+            };
+
+            // Perform translation
+            if (translations[originalText]) {
+                messageElement.firstChild.textContent = translations[originalText];
+                button.textContent = "Original"; // Change button text to switch back
+                button.onclick = () => revertTranslation(button, originalText); // Add event to revert translation
+            }
+        }
+
+        // Revert translation back to the original text
+        function revertTranslation(button, originalText) {
+            const messageElement = button.parentElement;
+            messageElement.firstChild.textContent = originalText;
+            button.textContent = "Translate"; // Change button text back to "Translate"
+            button.onclick = () => translateMessage(button); // Reset event to translate
+        }
+    </script>
+</body>
+</html>

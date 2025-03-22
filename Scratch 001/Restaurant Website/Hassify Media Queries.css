@@ -1,0 +1,20 @@
+@media screen and (max-width:460px) {
+.header-right button{display:none;}
+.header-center button{display:none;}
+.header-right .fa-bars {display:flex;}
+.header-right .fa-solid{display:inline;
+                       }
+.one-order button{width:90%;}
+.devide-2{flex-wrap:wrap;}
+.menu-cards{flex-wrap:wrap;}
+.food-card{width:90%;
+           height:400px;}
+}
+@media screen and (min-width:460px) and (max-width:800px) {
+.header-center button{display:none;}
+.one-order button{width:90%;}
+.menu-cards{flex-wrap:wrap;}
+.food-card{width:49%;
+           height:400px;}
+
+}

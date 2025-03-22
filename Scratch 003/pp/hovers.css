@@ -1,0 +1,20 @@
+.icons li a:hover{color:green;
+             font-size:20px;}
+.browse:hover{height:70px; width:180px;
+             cursor:pointer;}
+@media screen and (max-width: 400px) {
+        .icons {display:block;}
+        .images{display:block;}
+
+
+
+}
+@media screen and (max-width:750px) {
+  li {
+    font-size: 10px;}
+  .icons {display:block;}
+  .images{display:block;
+          display:relative;
+          left:200px;}
+  .navbar{padding:50px 50px 10px 50px;}
+   li a {padding-top: 30;}}

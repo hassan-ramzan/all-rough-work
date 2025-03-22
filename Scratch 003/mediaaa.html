@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Media Query</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body{background-color:red;}
+.container{display:grid;
+           grid-template-columns:repeat(3,1fr);
+           }
+.box1{height:100px; width:100px;
+      margin:30px;
+      background-color:orange;}
+@media screen and (max-width: 455px) {
+      body{background-color:aqua;}
+      .container{grid-template-columns:repeat(2,1fr);}
+      .box1{width:80%;}
+      
+      
+}
+@media screen and (min-width: 455px) and (max-width: 850px) {
+      body{background-color:black;}
+      .box1{width:80%;}
+      .container{grid-template-columns:repeat(3,1fr);}
+      
+
+
+}
+@media screen and (min-width: 850px) {
+      body{background-color:blue;}
+      .box1{width:80%;}
+      .container{grid-template-columns:repeat(4,1fr);}
+
+
+}
+
+</style>
+</head>
+<body>
+<div class="container">
+
+        <div class="box1"></div>
+        <div class="box1"></div>
+        <div class="box1"></div>
+        <div class="box1"></div>
+        <div class="box1"></div>
+        <div class="box1"></div>
+        <div class="box1"></div>
+        <div class="box1"></div>
+        <div class="box1"></div>
+        <div class="box1"></div>
+        <div class="box1"></div>
+        <div class="box1"></div>
+        <div class="box1"></div>
+        <div class="box1"></div>
+        <div class="box1"></div>
+        <div class="box1"></div>
+
+</div>
+</body>
+</html>

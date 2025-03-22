@@ -1,0 +1,461 @@
+console.log("Hello World");
+
+let a = 999999999;
+
+let b = 999999;
+
+const au = "Ayush";
+
+console.log(a*b);
+
+{
+
+  let a = "harry";
+
+  console.log(a);
+
+}
+
+console.log(a)
+                                var ko jhan chaho bdl do phir us tbdeli k bad pichli rqm bhuul jai ga or usa use kry ga hmesha phir tesri bar change kia phir usa use krna lg jai ga
+--------------------------------let ko hum apny k se k ander to bdl skty hy mgr usy aik bar ya aik jga dusri bar nhi bdl skty 
+console.log("Hello World");
+    const ko kbhi change nhi kr skty jo aik bar specify ho gya phir dobara nhi bdl skty
+ let a = 200;
+
+let b = 40;
+
+let c = a + b;
+
+let d =c/2;
+
+console.log(d)
+----------------------------------------------------------------
+console.log("Hello World");
+ 
+let a = 200;
+
+let b = 40;
+
+{
+
+  let a = 40;
+  
+  console.log(a);
+
+}
+
+console.log(a);
+----------------------------------------------------------------
+console.log("Hello World");
+ 
+var a = 200;
+
+var b = 40;
+
+console.log(a);
+
+{
+
+  var a = 40;
+
+  console.log(a);
+
+}
+
+console.log(a);
+----------------------------------------------------------------
+                                        PREMITIVE DATATYPES
+// nn bb ss u
+
+let a = null;
+
+let b = 345; 
+
+let c = true;
+ // can also be false
+let d = BigInt("567") + BigInt("3");
+
+let e = "Harry"
+;
+let f = Symbol("I am a nice symbol")
+;
+let g = undefined
+;
+console.log(a, b, c, d, e, f, g)
+
+<!--for checking type of d-->
+console.log(typeof d)
+----------------------------------------------------------------
+                                        NON-PREMITIVE DATATYPES/ OBJECTS
+// object in js
+
+const item = {
+
+  "hassan": true,
+
+  "ramazan": false,
+
+  "raza": undefined,
+
+}
+
+console.log(item["ramazan"])
+
+<!--practice-->
+// object in js
+
+const group = {
+
+  "group 1": "A",
+
+  "group 2": "B",
+
+  "group 3": "C",
+
+  "group 4": "D",
+
+}
+
+console.log(group["group 3"])
+or
+console.log(group.group 3)
+
+<!--practice-->
+// object in js
+
+const mathClass = {
+
+  name: "Mathematics",
+
+  teacher: "Mr. Smith",
+
+  students: 30,
+
+}
+
+console.log(mathClass["students"])
+
+<!--to change value of objects-->
+mathClass['class'] = "10"
+ 
+                                                          ab yha pr refrence 'mathClass' constant hy hum is ki value change nhi kr skty mgr hum is ke objects yani is k ander ki rqmay change kr skty hy
+----------------------------------------------------------------
+<!--dictionery-->
+const dictionery = {
+
+  determine : "to express",
+
+  war : "compete",
+
+  love: "pyaar",
+
+  dude :"friend",
+  
+}
+
+console.log(dictionery["dude"])
+----------------------------------------------------------------
+https://replit.com/@codewithharry/06Operators?v=1#index.js
+                                                          OPERATORS/EXPRESSIONS
+ARITHMETIC OPETATORS:
+let a = 7;
+
+let b = 4;
+
+console.log("a + b =", a+b)
+
+console.log("a - b =",a-b)
+
+console.log("a * b =", a*b)
+
+console.log("a ** b =", a**b)
+
+console.log("a / b =", a/b)
+
+console.log("a % b =", a%b)
+ is neechy waly main a++ mtlab increment kia to increment ka jwab to whi ho ga mgr jb increment k bad a ki value lay gy to 1 added ho ga
+ ab ++ bad main hy to ye pahly a dekhai ga phir baad main increment kry ga mgr ab agr ++a ho to ab pahly increment kry ga phir jwab dy ga
+let a = 7;
+
+console.log("a++ =", a++)
+  
+console.log(a)
+console.log("++a =", ++a)
+ 
+
+<!--puzzle yourself-->
+let a = 15
+
+console.log("a + + = ", a++ ) 
+
+console.log("a + + = ", a++)
+
+console.log("--a = ", --a)
+
+console.log("a -- =", a--) 
+console.log("a =", a)      
+console.log("a + + =", a++) 
+console.log("a + + =", a++) 
+console.log("++a =", ++a) 
+console.log("a -- = ", a--) 
+
+console.log("a + + =", a++) 
+
+console.log("a =",a)
+15
+
+16
+
+16 
+
+16 
+
+15
+
+15
+
+16
+
+18
+
+18
+
+17
+
+18
+
+
+----------------------------------------------------------------
+ASSIGMENT OPETATORS:
+ a = 20;
+
+ a += 10;
+
+console.log("a +=",a)
+
+a *= 10;
+
+console.log("a *=",a)
+
+// Assignment Operators 
+let assignment = 1;
+
+assignment += 5 // same as assignment = assignment + 5
+
+console.log("a is now = ", assignment)
+
+assignment -= 5 // same as assignment = assignment - 5
+
+console.log("a is now = ", assignment)
+
+assignment *= 5 // same as assignment = assignment * 5
+
+console.log("a is now = ", assignment)
+
+assignment /= 5 // same as assignment = assignment / 5
+
+console.log("a is now = ", assignment)
+
+ 6
+ 1
+ 5 
+ 1
+
+----------------------------------------------------------------
+COMPARISON  OPETATORS:
+let comp1 = 2;
+
+let comp2 = 5;
+
+console.log("comp1 == comp2",comp1 == comp2)
+
+console.log("comp1 != comp2",comp1 != comp2)
+
+console.log("comp1 === comp2",comp1 === comp2)
+
+console.log("comp1 !== comp2",comp1 !== comp2)
+
+console.log("comp1 < comp2",comp1 < comp2)
+--------------------------------------------------------
+rough
+
+/*
+const dictionery = {
+  determine : "to express",
+  war : "compete",
+  love: "pyaar",
+  dude :"friend",
+  }
+console.log(dictionery["dude"])
+ */
+/*
+let a = 7;
+let b = 4;
+console.log("a + b =", a+b)
+console.log("a - b =",a-b)
+console.log("a * b =", a*b)
+console.log("a ** b =", a**b)
+console.log("a / b =", a/b)
+console.log("a % b =", a%b)
+console.log("a++ =", a++)
+console.log(a)
+console.log("a-- =", a--)
+ */
+/*let a = 15
+15
+16
+16 
+16 
+15
+15
+16
+18
+18
+17
+18
+console.log("a + + = ", a++ ) 
+console.log("a + + = ", a++)
+console.log("--a = ", --a)
+console.log("a -- =", a--) 
+console.log("a =", a)      
+console.log("a + + =", a++) 
+console.log("a + + =", a++) 
+console.log("++a =", ++a) 
+console.log("a -- = ", a--) 
+console.log("a + + =", a++) 
+console.log("a =",a)
+*/
+/*
+ a = 20;
+ a += 10;
+console.log("a +=",a)
+a *= 10;
+console.log("a *=",a)
+*/
+/*
+let comp1 = 2;
+let comp2 = 5;
+console.log("comp1 == comp2",comp1 == comp2)
+console.log("comp1 != comp2",comp1 != comp2)
+console.log("comp1 === comp2",comp1 === comp2)
+console.log("comp1 !== comp2",comp1 !== comp2)
+console.log("comp1 < comp2",comp1 < comp2)
+  */
+/*let x = 4;
+let y = '4';
+console.log(x !== y || x!=y)
+console.log(x == y && x!==y)
+*/
+
+----------------------------------------------------------------
+                                                         Conditional Expressions:
+let b = prompt("tell me your pnone number");
+type = string
+to change type:
+b = Number.parseInt(b)
+
+                                                                       prompt uch poochny k kaam ata hy lakin alert btany k kam aata hy
+
+let b = "Hello I am a bug";
+
+console.log(b);
+
+alert(b);
+
+----------------------------------------------------------------
+check: mdn swich
+--------------------------------
+console.log("you can", b>20?"ff":"gg");
+--------------------------------
+
+--------------------------------
+
+--------------------------------
+
+--------------------------------
+
+--------------------------------
+
+--------------------------------
+
+--------------------------------
+
+--------------------------------
+
+--------------------------------
+
+--------------------------------
+
+--------------------------------
+
+--------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

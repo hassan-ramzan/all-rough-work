@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Clock Website</title>
+    <style>
+/* Resetting default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and background styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(45deg, #6a11cb, #2575fc);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+    margin: 0;
+    overflow: hidden;
+}
+
+/* Clock container styling */
+.clock-container {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.8);
+    width: 300px;
+}
+
+/* Styling the clock */
+.clock {
+    font-size: 80px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+/* Date and day styling */
+.date {
+    font-size: 20px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Greeting message style */
+.greeting {
+    font-size: 18px;
+    font-style: italic;
+}
+
+/* Smooth transition for time update */
+.clock, .date, .greeting {
+    transition: all 0.5s ease-in-out;
+}
+/* styles.css */
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f4f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.notepad-container {
+  background-color: #ffffff;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 24px;
+  color: #333;
+}
+
+textarea {
+  width: 100%;
+  height: 300px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: none;
+  margin-top: 20px;
+}
+
+.buttons {
+  margin-top: 20px;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+button:focus {
+  outline: none;
+}
+
+    </style>
+
+</head>
+<body>
+    <div class="clock-container">
+        <div id="clock" class="clock"></div>
+        <div id="date" class="date"></div>
+        <div id="greeting" class="greeting"></div>
+    </div>
+<div class="notepad-container">
+    <h1>My Daily Notes</h1>
+    <textarea id="notes" placeholder="Write your notes here..."></textarea>
+    <div class="buttons">
+      <button id="saveBtn">Save Notes</button>
+      <button id="clearBtn">Clear Notes</button>
+    </div>
+  </div>
+
+    <script>
+function updateClock() {
+    let time = new Date();
+    let hours = time.getHours();
+    let minutes = time.getMinutes();
+    let seconds = time.getSeconds();
+    let day = time.toLocaleString('en-us', { weekday: 'long' });
+    let date = time.toLocaleString('en-us', { day: 'numeric', month: 'long' });
+
+    // Format the time to always show two digits
+    hours = hours < 10 ? '0' + hours : hours;
+    minutes = minutes < 10 ? '0' + minutes : minutes;
+    seconds = seconds < 10 ? '0' + seconds : seconds;
+
+    let formattedTime = `${hours}:${minutes}:${seconds}`;
+    let formattedDate = `${day}, ${date}`;
+
+    // Get the clock and date elements
+    document.getElementById('clock').textContent = formattedTime;
+    document.getElementById('date').textContent = formattedDate;
+
+    // Display greeting based on time of day
+    let greeting = '';
+    if (hours >= 5 && hours < 12) {
+        greeting = 'Good Morning!';
+    } else if (hours >= 12 && hours < 17) {
+        greeting = 'Good Afternoon!';
+    } else {
+        greeting = 'Good Evening!';
+    }
+    document.getElementById('greeting').textContent = greeting;
+}
+
+// Update the clock every second
+setInterval(updateClock, 1000);
+
+// Initialize clock when page loads
+window.onload = updateClock;
+// script.js
+
+// Load saved notes on page load
+document.addEventListener('DOMContentLoaded', () => {
+  const notes = localStorage.getItem('dailyNotes');
+  if (notes) {
+    document.getElementById('notes').value = notes;
+  }
+});
+
+// Save notes to localStorage
+document.getElementById('saveBtn').addEventListener('click', () => {
+  const notes = document.getElementById('notes').value;
+  localStorage.setItem('dailyNotes', notes);
+  alert("Notes saved successfully!");
+});
+
+// Clear notes
+document.getElementById('clearBtn').addEventListener('click', () => {
+  document.getElementById('notes').value = '';
+  localStorage.removeItem('dailyNotes');
+});
+
+
+    </script>
+</body>
+</html>

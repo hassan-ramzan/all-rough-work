@@ -1,0 +1,50 @@
+*{margin:0; padding:0;
+  color:white;}
+.navbar{height:60px;
+        background-color:#0f1111;}
+button{background-color:#f08804;}
+#logo{color:#f08804;
+      font-size:20px;}
+a{margin-right:200px;}
+
+
+
+
+
+.container{border:2px solid red;
+           display:flex;
+           height:80vh;
+           flex-wrap:wrap;
+           align-content:center;
+           
+
+}
+.item{height:32px;
+      width:32px;
+      background-color:blueviolet;
+      border:2px solid black;
+      margin:4px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

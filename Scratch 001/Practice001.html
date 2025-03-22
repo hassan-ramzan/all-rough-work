@@ -1,0 +1,110 @@
+<!DOCYPE html>
+<html>
+<head>
+<title>Hassan</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,300..800;1,300..800&display=swap');
+:root {
+  --main-bg-color: black;
+}
+header{height:58px;
+       background-color:var(--main-bg-color);}
+main {height:89%;
+      padding:30px 0px;
+     
+      display:flex;
+      justify-content:center;
+     }
+.card-div{height:500px;
+          width:40%;
+          Text-align:center;overflow:hidden;
+          padding:30px;
+          border-radius:20px;
+          background-color:blue;
+          border:1px solid transparent;
+          box-shadow: 0px 0px 10px 1px black;
+         }
+h1       {font-family: "Host Grotesk", sans-serif;
+          color:white;
+          padding-top:30px;
+          position:relative;
+          font-weight:900;
+          font-size:28px;
+          
+         animation:animate 6s linear 1s infinite normal;
+         }
+@keyframes animate {0%{left: 480px;}
+                    5%{left: 430px;}
+                    10%{left:380px;}
+                    15%{left:330px;}
+                    20%{left:280px;}
+                    25%{left:230px;}
+                    30%{left:180px;}
+                    35%{left:130px;}
+                    40%{left:80px;}
+                    45%{left:30px;}
+                    50%{left:-20px;}
+                    55%{left:-80px;} 
+                    60%{left:-130px;}
+                    65%{left:-180px;}
+                    70%{left:-230px;}
+                    75%{left:-280px;}
+                    80%{left:-330px;}
+                    85%{left:-380px;}
+                    90%{left:-430px;}
+                    95%{left:-480px;}
+                    100%{right:520px;}
+                   }
+.login-h1   {color:white;
+             font-size:25px;
+             margin:40px 0px;
+            }
+.forms-input{text-align:left;
+            }
+form p {font-size:20px;
+        font-weight:400;
+        color:white;
+       }
+.text:focus {background-color:#fff959;
+             border:1px solid #6274fc;
+
+
+             }
+form input {height:50px;
+            width:80%;
+            border-radius:10px;
+            border:none;
+            background-color:;
+            margin-left:50px;
+            padding:10px;
+           }
+.submit    {margin-top:40px;
+            }
+.submit:hover{border:1px solid orange;}
+footer{height:58px;
+       background-color:var(--main-bg-color);}
+</style>
+</head>
+<body>
+<header>
+</header>
+<main>
+    <div class="card-div">
+         <h1>Welcome To Admire College </h1> 
+         <div class="login-h1">Enter Your Login Data</div>
+         <div class="forms-input">
+         <h2><marquee>Welcome To Admire College </marquee></h2> 
+               <form>
+                     <p>User Name:</p><input class="text" type="text" placeholder="Please Enter your Name">
+                     <p>Password:</p><input class="text" type="password" placeholder="Please Enter your Password">               
+                     <br><input class="submit" type="submit" value="Submit">
+               
+               
+         </div>
+
+    </div>
+</main>
+<footer>
+</footer>
+</body>
+</html>

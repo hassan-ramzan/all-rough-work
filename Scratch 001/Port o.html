@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Portfolio 1</title>
+<link rel="stylesheet" href="portfolio 1.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com
+/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="s
+ha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZ
+Qqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolic
+y="no-referrer" />
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
+
+
+*                     {margin:0;
+                       padding:0; 
+                      }
+body                  {margin:0;
+                       padding:0; 
+                      }
+.navbar               {height:85px;
+                       background-color:#170550;
+                       color:white;
+                       
+                       
+
+                      }
+              
+
+
+                      
+.main-row             {display:flex;
+                       justify-content:space-around;
+                       align-items:center;
+                       
+                       
+
+
+                      }
+.central-icons        {height:20px; width:500px;
+                       display:flex;
+                       list-style:none;
+                       justify-content:space-between;
+                       align-items:center;
+                       
+                      }
+.central-icons  li a  {text-decoration:none;
+                       color:white;
+                      }
+.hire-me a            {text-decoration:none;
+                       color:#461959
+                      }
+.central-icons li a:hover{color:#F86F03;}
+
+.hire-me              {height:40px;
+                       width:120px;
+                       border-radius:70px;
+                       border:0px;
+                      }
+.hire-me:hover        {background-color:#F86F03;}
+hr                    {border-width:0.1px;
+                       border-style: solid;
+                       border-color:#FFFFFF;
+                      }
+                                                                 /*main*/
+.first-parent-container{height:550px;
+                        background-color:#31065A;
+                        display:flex;
+                        justify-content:center;
+                        align-items:center;
+                       }
+.text-show             {height:300px;
+                        width:35%;
+                        
+                       }
+.p-one                 {color:#F86F03;
+                        font-family: "IBM Plex Mono", monospace;
+                        font-weight: 400;
+                        font-style: normal;
+                       }
+.p-two                 {color:white;
+                        font-family: "Poppins", sans-serif;
+                        font-size:30px;
+                        font-weight: 800;
+                        font-style: normal;
+                        line-height:0.3px;
+                       }
+.p-three               {color:white;
+                        font-family: sans-serif, monospace;
+                        font-weight: 400;
+                        font-style: normal;
+                       }
+.p-four                {color:white;
+                        font-family: ;
+                        font-weight: 100;
+                        font-style: normal;
+                        line-height:25px;
+                       }
+
+  .image-show-pic-one  {height:300px;
+                        width:35%;
+                       }       
+.link-icons            {width:150px;
+                        
+                        display:flex;
+                        justify-content:space-between;                       
+                        border-radius:50%;
+                       }
+
+.link-icons .fa-brands:hover       {border: 1.5px solid #F86F03;
+                        color:#F86F03;
+                       }
+.link-icons .fa-brands             {border:1.5px solid white;
+                        border-radius:40%;
+                        text-align:center;
+                        height:20px;
+                        width:20px;
+                        padding-top:3px;
+                        padding-left:3px;
+                        padding-right:3px;
+                        color: white;
+                       }
+.cv-download           {height:45px;
+                        width:150px; 
+                        border-radius:20px;
+                        border:0px;
+                        margin-top:50px;
+                       }
+.cv-download:hover     {background-color:#F86F03;}
+                                                                    /*About Me*/
+.about-me-parent       {height:700px;
+                        background-color:#170550;
+                         
+                         
+                       }
+.about-me-parent h1    {text-align:center;
+                        padding:80px;
+                        text-decoration:underline #D9D9D9 ;
+                        color:white;
+                       }
+.about-me-parent h1 span{color:#F86F03;}
+.about-me-outer-bag    {display:flex;
+                        justify-content:center;
+                        align-content:center;
+                        color:white;
+
+
+
+                       }
+.about-me-image        {height:400px;
+                        width:400px;
+                        margin-right:100px;
+                        border-radius:30px;
+                        
+                       }
+.about-me-text         {height:400px;
+                        width:300px;
+                        padding-left:100px;
+                       }
+.about-me-text-one     {font-size:30px;
+                        line-height:;
+                       }
+.about-me-learn-more   {height:40px;
+                        width:200px; 
+                        border-radius:40px;
+                        margin:30px;
+                        color:#461959;
+                        border:0px;
+                       }
+.about-me-learn-more:hover{background-color:#F86F03;}
+                                    
+                                                                /*My Services*/
+
+.my-services           {height:700px;
+                        background-color:#31065A;
+                       }
+.my-services h1        {text-align:center;
+                        text-decoration:underline #D9D9D9;
+                        padding:40px;
+                       }
+.my-services h1 span   {color:#F86F03;}
+.services-parent-box   {display:flex;
+                        justify-content:center;
+                        align-items:center;
+                        padding:0px 150px;
+                        text-align:center;}
+.service-child-one     {height:320px;
+                        width:230px;
+                        background-color:white;
+                        margin:20px 20px 0px 0px ;
+                        border-radius:20px; 
+                        }
+.fa-solid              {color:#F86F03;
+                        padding:30px 0px 20px 0px;
+                        
+                         }
+.service-child-one p   {padding:20px;
+                       } 
+
+                                                                    
+
+
+                                                                       /* Portfolio */
+.portfolio             {height:600px;
+                        background-color: #31065A;
+                       }  
+.portfolio  h1         {color:white;
+                        text-decoration:underline #D9D9D9;
+                        text-align:center;
+                        padding:30px 0px;
+                       } 
+.portfolio-images-parent{display:flex;
+                         justify-content:center;
+                         flex-wrap:wrap; 
+                         padding:0px 20px;
+                        }
+.portfolio-img          {height:200px;
+                        width:240px;
+                        margin:10px 0px 10px 30px;
+                        border-radius:20px;
+                        }
+.portfolio-img:hover   {opacity:0.5;}
+
+                                                                   /* Contact */
+.contact               {height:640px;
+                        background-color: #170550;
+
+
+
+                        }
+.contact  h1           {color:white;
+                        text-decoration:underline #D9D9D9;
+                        text-align:center;
+                        padding:50px 0px;
+                       } 
+.contact-box           {display:flex;
+                        justify-content:space-around;
+                        flex-wrap:wrap;
+                        padding:0px 50px;
+                       }
+.left-contact-box      {height:400px;
+                        width:400px;
+                        color:white;
+                        
+                       }
+
+.left-contact-box-phone{display:flex; 
+                        width:170px;
+                        justify-content:space-between;
+                        padding-bottom:0.5px;
+                       }
+.left-contact-box-phone:hover {color: #F86F03;}
+.left-contact-box-phone p {padding-top: 12px;
+                           font-size:20px;
+                          }
+
+.left-contact-box-email  {display:flex; 
+                          width:215px;
+                          justify-content:space-between;
+                         padding-top:0.22px;
+                         }
+.left-contact-box-email:hover {color: #F86F03;}
+ .left-contact-box-email p {padding-top: 16px;
+                            font-size:20px;}
+.left-contact-box-tele   {display:flex; 
+                          width:170px;
+                          justify-content:space-between;
+                          align-items:center;
+                         padding-top:22px;
+                         }
+.left-contact-box-tele :hover {color: #F86F03;}
+ .left-contact-box-tele .fa-brands  {color:#F86F03;}
+ .left-contact-box-tele p {padding-top: 1px;
+                            font-size:20px;
+                           }
+.right-contact-box      {height:400px;
+                        width:700px;
+                        color:white;
+                        
+                        
+                         }
+.input                 {background-color:#43366A;
+                        height:30px;
+                        width:600px;
+                        border-radius:20px;
+                        margin:10px 50px;
+                        color:white;
+                        border:0px ;
+                        }
+
+#feed                 {height:150px;
+                       width:600px; 
+                       border-radius:20px;
+                       margin:10px 50px;
+                       background-color:#43366A;
+                      }
+.submit-contact       {height:50px; 
+                       width:200px;
+                       background-color:#43366A;
+                       border:0px ;
+                       border-radius:10px;
+                      }
+.submit-contact:hover {background-color: #F86F03;}
+                                                      /* Footer */                                              
+footer                {height:50px;
+                       background-color:#31065A;
+                       text-align:center;
+                       display:flex;
+                       justify-content:center;
+                       align-items:center;
+                       }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</style>
+
+
+
+
+
+</head>
+<body>
+<header class="navbar">
+   <ul class="main-row">
+               <h1 class="logo">Hassan Ramzan</h1>
+            <div class="central-icons">
+               <li><a href="--">Home</a></li>
+               <li><a href="--">About Me</a></li>
+               <li><a href="--">Services</a></li>
+               <li><a href="--">Skills</a></li>
+               <li><a href="--">Portfolio</a></li>
+               <li><a href="--">Contact</a></li>
+            </div>
+              <button class="hire-me "><a href="--">Hire Me</a></button>
+   </ul>
+</header> 
+                             <hr>
+                                                              <!--main-->
+<main>
+<div class="first-parent-container">
+      <div class="text-show">
+           <div class="p-one">Hi,It's me</div>
+           <p class="p-two">Hassan Ramzan</p>
+           <p class="p-three">And I am a frontend developer</p>
+           <p class="p-four"> 
+                   With five years of web development experience, I specialize in
+                     creating responsive, user-friendly websites and expertly solving
+                   technical challenges to enhance your online presence.                   
+           </p>
+     <div class="link-icons">
+         <div class="icon-fb"><a href="--"><i class="fa-brands fa-facebook-f fa-1.75x" ></i></a></div>
+         <div class="icon-fb"><a href="--"><i class="fa-brands fa-linkedin-in fa-1.75x"></i></a></div>
+         <div class="icon-fb"><a href="--"><i class="fa-brands fa-pinterest fa-1.75x"></i></i></a></div>
+         <div class="icon-fb"><a href="--"><i class="fa-brands fa-square-twitter fa-1.75x"></i></a></div>
+    </div>
+            <button class="cv-download">Download CV</button>
+           
+     </div>
+     
+            <img class="image-show-pic-one" src="Banner Image.jpg"alt="web development">  
+</div>     
+             
+
+                                <hr>
+                                                               <!--About Me   -->
+<div class="about-me-parent">
+<h1>About<span> Me</span></h1>
+
+<div class="about-me-outer-bag">
+               
+                        <img class="about-me-image" src="quaid.jpg.jpg"alt="personal picture">
+               
+               <div class="about-me-text">
+               <div class="about-me-text-one">Frontend Developer &
+                Graphic Designer</div>
+               <div class="about-me-text-two">Lorem ipsum dolor sit amet 
+                 consectetur adipisicing elit. At reiciendis, quas voluptatum
+                       facere quam iusto itaque sapiente dolor provident 
+                     aspernatur unde, suscipit illum, velit similique animi iste
+                    corporis repellendus veritatis minus voluptas. Sunt, eligendi.
+                      Praesentium explicabo facere quo ad earum.
+                    </div><br>
+               <div class="about-me-text-three">
+                                       Lorem ipsum dolor sit amet consectetur 
+                  adipisicing elit. At reiciendis, quas voluptatum facere quam
+                   iusto itaque sapiente dolor provident.
+               </div>
+                   <a href="--"><button class="about-me-learn-more">Learn More...</button></a>
+              
+
+               </div>
+ </div>
+
+</div>                       
+                        
+
+                                      <hr>
+                                                               <!--My Services   -->
+<div class="my-services">
+<h1>My<span> Services</span></h1>
+   <div class="services-parent-box">
+     <div class="service-child-one">
+                <i class="fa-solid fa-laptop-code fa-3x"></i>
+                <h3>Web Development</h3>
+                <p>Web development refers to the process of creating
+                and maintaining websites or web applications. It involves a 
+                 combination of skills and technologies to build user-friendly, 
+               </p>
+     </div>
+     <div class="service-child-one">
+                <i class="fa-solid fa-mobile-screen-button fa-3x"></i>
+                <h3>Web Development</h3>
+                <p>Web development refers to the process of creating
+                and maintaining websites or web applications. It involves a 
+                 combination of skills and technologies to build user-friendly, 
+               </p>
+
+
+      </div>
+     <div class="service-child-one">
+               <i class="fa-solid fa-chart-simple fa-3x"></i>
+               <h3>Web Development</h3>
+                <p>Web development refers to the process of creating
+                and maintaining websites or web applications. It involves a 
+                 combination of skills and technologies to build user-friendly, 
+               </p>
+      </div>
+     </div>
+
+</div>
+                                  <hr>
+                                                            
+
+
+                                       
+                                                               <!--Portfolio   -->
+<div class="portfolio">
+<h1>Portfolio</h1>
+<div class="portfolio-images-parent">
+            <a href="-"> <img class="portfolio-img" src="pro1.jpg" alt="computer"></a>
+            <a href="-"> <img class="portfolio-img" src="pro2.jpg" alt="computer"></a>
+            <a href="-"> <img class="portfolio-img" src="pro3.jpg" alt="computer"></a>
+            <a href="-"> <img class="portfolio-img" src="pro4.jpg" alt="computer"></a>
+            <a href="-"> <img class="portfolio-img" src="pro5.jpg" alt="computer"></a>
+            <a href="-"> <img class="portfolio-img" src="pro6.jpg" alt="computer"></a>
+            <a href="-"> <img class="portfolio-img" src="pro7.jpg" alt="computer"></a>
+            <a href="-"> <img class="portfolio-img" src="pro8.jpg" alt="computer"></a>
+</div>
+
+</div>
+
+
+
+
+ 
+
+                                       <hr class="straight-line">
+                                                               <!--Contact   -->
+<div class="contact">
+<h1>Contact</h1>
+<div class="contact-box">
+                <div class="left-contact-box">
+                <div class="left-contact-box-phone">
+                 <i class="fa-solid fa-phone fa-2x"></i> <p>03017440378<br>03017440378</p>
+                  </div>
+
+                  <div class="left-contact-box-email">
+                  <i class="fa-solid fa-envelope fa-2x"></i><p>hassan@gmail.com</p>
+                  </div>
+                  <div class="left-contact-box-tele">
+                  <i class="fa-brands fa-telegram fa-2x"></i><p>Hassan Ramzan</p>
+                  </div>
+                  </div>
+
+                    <!--@#%%-->
+
+
+                 
+                 <div class="right-contact-box">
+                  <input class="input" id="aaa" type="text" placeholder="Full Name">
+                  <input class="input" id="sss" type="text" placeholder="Email Address">
+                  <input class="input" id="ddd" type="text" placeholder="Phone Number">
+                  <input class="input" id="fff" type="text" placeholder="Subject">
+                  <textarea name="Feedback" id="feed" placeholder="Your Message"></textarea>
+                   <center><button class="submit-contact">Submit</button></center>          
+                   </div>
+ </div>                   
+ </div>
+</main>
+<footer>
+Copywrite & Copy : 2023 | All Right Reserved by RIEAD
+
+
+
+</footer>               
+                    
+                    
+                  
+                  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

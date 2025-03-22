@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hassan</title>
+</head>
+<style>
+
+@media(any-hover:hover){a:hover{background:red;}}  
+div{height:50px; 
+    width:50px;
+    background-color:pink;}
+button{height:50px; width:200px;}
+@media(any-hover:hover){button:hover{height:100px;}}  
+body{}
+div{height:50px; width:200px;
+    background-color:red;
+    position:relative;
+    top:200px;
+    left:100px;}
+div:hover{background-color:yellow;
+        font-size:20px;
+          color:chocolate;
+          transform:rotate(360deg) ; 
+           transform:translate(800px);}
+div {transition:all 5s ease-out 0s;}    
+
+div{height:50px; width:200px;
+    background-color:red;
+    position:relative;
+    top:200px;
+    left:100px;
+     animation:Coloranimate 5s linear 0s infinite alternate; }
+
+@keyframes Coloranimate {from {background-color:red;}
+             to {background-color:blue;}}
+
+ 
+
+
+
+
+
+
+
+
+
+
+</style>
+<body>
+<a href="@#">try hovering me</a>  
+<div>
+</div>   
+
+<button><a>Transite me</a></button>  
+
+<div>Hello I am here
+</div>                            
+
+<div>Hello I am here
+</div>
+
+
+
+
+</body>
+</html>
